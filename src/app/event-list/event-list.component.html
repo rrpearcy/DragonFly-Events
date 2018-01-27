@@ -1,3 +1,15 @@
-<p>
-  event-list works!
-</p>
+<h1 *ngIf="!event">Loading...</h1>
+
+<ul class="list-view">
+  <li *ngFor="let item of event">
+    <a [routerLink]="['/details', item.id]">
+      <!--<img src="{{ item.image() }}">-->
+      <span class="event-title">{{ item.formattedName() }}</span>
+      <br>
+      <br>
+      <span>{{ item.description }}</span>
+      <br>
+      <br>
+    </a>
+  </li>
+</ul>

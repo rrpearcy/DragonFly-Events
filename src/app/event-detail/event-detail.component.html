@@ -1,3 +1,7 @@
-<p>
-  event-detail works!
-</p>
+<h1>{{ event.formattedName() || 'Loading...' }}</h1>
+
+<div *ngIf="event.name" class="details.container">
+  <!--<img src="{{ event.image }}">-->
+  <!--<span>{{ event.description }}</span>-->
+
+</div>
